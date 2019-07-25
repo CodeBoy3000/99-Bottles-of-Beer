@@ -1,19 +1,9 @@
-bye = 0
+bottles = 100
 
-while bye < 3 do
-  puts 'Say something to grandma'
-  input = gets.chomp
-
-  if input == 'BYE'
-  bye = bye + 1
-    puts 'PARDON ME?!'
-  else
-    if input == input.upcase
-    bye = 0
-      puts 'NO, NOT SINCE ' + (rand(1938..1950)).to_s + '!'
-    else
-    bye = 0
-      puts 'HUH?! SPEAK UP, SONNY!'
-    end
+while bottles > 2
+  puts (bottles-1).to_s + ' bottles of beer on the wall, ' + (bottles-1).to_s + ' bottles of beer. Take one down and pass it around, ' + (bottles -2).to_s + ' bottles of beer on the wall'
+bottles = bottles - 1
+  if bottles == 2
+    puts (bottles-1).to_s + ' bottle of beer on the wall, ' + (bottles-1).to_s + ' bottle of beer. Take one down and pass it around, ' + (bottles -2).to_s + ' bottles of beer on the wall'
   end
 end
